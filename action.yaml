@@ -12,4 +12,4 @@ outputs:
 
 runs:
   using: 'docker'
-  image: 'docker://indicava/firebase-action:v1'
+  image: 'docker://indicava/firebase-action:master'
