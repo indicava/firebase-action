@@ -1,5 +1,5 @@
 name: 'GitHub Action for Firebase'
-author: 'Jeremy Shore'
+author: 'Elad Altstein'
 description: 'Wraps the firebase-tools CLI to enable common commands.'
 
 branding:
@@ -12,4 +12,4 @@ outputs:
 
 runs:
   using: 'docker'
-  image: 'docker://w9jds/firebase-action:v2.2.2'
+  image: 'docker://indicava/firebase-action:v1'

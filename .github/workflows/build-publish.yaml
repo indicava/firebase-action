@@ -2,13 +2,7 @@ name: Build Docker Images
 
 on:
   push:
-    branches:
-      - master
-    tags:
-      - 'v*'
-  pull_request:
-    branches:
-      - 'master'
+    branches: [ master ]
 
 jobs:
   build:
@@ -25,7 +19,7 @@ jobs:
       uses: docker/metadata-action@v4
       with:
         images: |
-            w9jds/firebase-action
+            indicava/firebase-action
             ghcr.io/${{ github.repository }}
 
     -
@@ -33,7 +27,7 @@ jobs:
       if: github.event_name != 'pull_request'
       uses: docker/login-action@v2
       with:
-        username: w9jds
+        username: indicava
         password: ${{ secrets.DOCKER_PASSWORD }}
 
     -
@@ -43,7 +37,7 @@ jobs:
       with:
         registry: ghcr.io
         username: ${{ github.actor }}
-        password: ${{ secrets.PACKAGES_TOKEN }}
+        password: ${{ secrets.GITHUB_TOKEN }}
 
     -
       name: Build and push

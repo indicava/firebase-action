@@ -1,9 +1,9 @@
 FROM node:16.14.0-buster
 
 LABEL version="1.2.4"
-LABEL repository="https://github.com/w9jds/firebase-action"
-LABEL homepage="https://github.com/w9jds/firebase-action"
-LABEL maintainer="Jeremy Shore <w9jds@github.com>"
+LABEL repository="https://github.com/indicava/firebase-action"
+LABEL homepage="https://github.com/indicava/firebase-action"
+LABEL maintainer="Elad Altstein <indicava@github.com>"
 
 LABEL com.github.actions.name="GitHub Action for Firebase"
 LABEL com.github.actions.description="Wraps the firebase-tools CLI to enable common commands."
